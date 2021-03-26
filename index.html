@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link href='https://fontawesome.com/icons?d=gallery&p=2&q=calculator' rel='stylesheet'> -->
+    <link rel="stylesheet" href="style.css">
+    <title>BudgetApp</title>
+</head>
+<body>
+    <script src="https://kit.fontawesome.com/5e3232751b.js" crossorigin="anonymous"></script>
+    <div class="container mt-4">
+        <h1 class="display-4 text-center">
+            <i class="fas fa-calculator text-primary"></i>Budget<span class="text-primary">App</span></h1>
+            <form id="addExpense-form">
+                <div class="from-group">
+                    <label for="title">Please Enter Your Expense</label>
+                    <input type="text" id="title"
+                    class="form-control">
+                </div>
+                <div class="from-group">
+                    <label for="amount">Please Enter Expense Amount</label>
+                    <input type="text" id="amount"
+                    class="form-control">
+                </div>
+                <input type="submit" value="Add Expense"
+                class="btn btn-primary btn-block">
+            </form>
+            <form id="addBudget-form">
+                <div class="from-group">
+                    <label for="budget">Please Enter Your Budget</label>
+                    <input type="text" id="budget"
+                    class="form-control">
+                </div>
+                <input type="submit" value="Calculate"
+                class="btn btn-primary btn-block">
+            </form>
+            <table class="table table-striped mt-5">
+                <thead>
+                    <tr>
+                        <th>Expense Title</th>
+                        <th>Expense Value</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody id="expense-list"></tbody>
+            </table>
+            <table class="table table-striped mt-5">
+                <thead>
+                    <tr>
+                        <th>BUDGET</th>
+                        <th>EXPENSES</th>
+                        <th>BALANCE</th>
+                    </tr>
+                </thead>
+                <tbody id="budget-list"></tbody>
+            </table>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
